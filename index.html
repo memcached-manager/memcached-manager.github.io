@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/custom.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,92 +16,89 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Memcached Manager</h1>
+        <div><img id="logo" src="images/logo.png" /></div>
         <p>The definitive solution to manage your memcached server.</p>
-
-
         <p class="view"><a href="https://github.com/memcached-manager">View My GitHub Profile</a></p>
-
       </header>
       <section>
         <p>Miss being able to actually know what's inside your memcached server in a simple way? Memcached Manager is there for you.</p>
 
-<h2>
-<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+        <h2>
+        <a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
 
-<p>(image of menu)</p>
+        <p>(image of menu)</p>
 
-<ul>
-<li>Check how much time is left for any key to expire or how much size it occupies.</li>
-</ul>
+        <ul>
+        <li>Check how much time is left for any key to expire or how much size it occupies.</li>
+        </ul>
 
-<p>(image of search)</p>
+        <p>(image of search)</p>
 
-<ul>
-<li>Find any key you want. (made in angular.js)</li>
-</ul>
+        <ul>
+        <li>Find any key you want. (made in angular.js)</li>
+        </ul>
 
-<p>(terminal mode image)</p>
+        <p>(terminal mode image)</p>
 
-<ul>
-<li>Type anything on a terminal connection directly with the memcached server, no need to telnet anymore.</li>
-</ul>
+        <ul>
+        <li>Type anything on a terminal connection directly with the memcached server, no need to telnet anymore.</li>
+        </ul>
 
-<p>(image with crud stuff)</p>
+        <p>(image with crud stuff)</p>
 
-<ul>
-<li>A CRUD for your memcached server: Create, Read, Update or Delete any key without using an archaic direct telnet connection.</li>
-</ul>
+        <ul>
+        <li>A CRUD for your memcached server: Create, Read, Update or Delete any key without using an archaic direct telnet connection.</li>
+        </ul>
 
-<p>All that packaged in a slick web interface, just install it and use it! It's also pluggable to any rack/rails application with <em>one line</em>.</p>
+        <p>All that packaged in a slick web interface, just install it and use it! It's also pluggable to any rack/rails application with just <em>one line</em> of programming.</p>
 
-<h2>
-<a id="ok-i-want-it-how-do-i-install" class="anchor" href="#ok-i-want-it-how-do-i-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ok, I want it. How do I install?</h2>
+        <h2>
+        <a id="ok-i-want-it-how-do-i-install" class="anchor" href="#ok-i-want-it-how-do-i-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ok, I want it. How do I install?</h2>
 
-<ol>
-<li>
-<p>Install the gem.</p>
+        <ol>
+        <li>
+        <p>Install the gem.</p>
 
-<pre><code>gem install memcached-manager</code></pre>
-</li>
-<li>
-<p>Run memcached-manager with your memcached up</p>
+        <pre><code>gem install memcached-manager</code></pre>
+        </li>
+        <li>
+        <p>Run memcached-manager with your memcached up</p>
 
-<pre><code>memcached-manager</code></pre>
-</li>
-</ol>
+        <pre><code>memcached-manager</code></pre>
+        </li>
+        </ol>
 
-<p>If your memcached is running on a different domain or port(locahost:11211):</p>
+        <p>If your memcached is running on a different domain or port(locahost:11211):</p>
 
-<pre><code>memcached-manager -H foo.bar -P 1337</code></pre>
+        <pre><code>memcached-manager -H foo.bar -P 1337</code></pre>
 
-<p>or</p>
+        <p>or</p>
 
-<pre><code>memcached-manager --memcached-host foo.bar --memcached-port 1337
-</code></pre>
+        <pre><code>memcached-manager --memcached-host foo.bar --memcached-port 1337
+        </code></pre>
 
-<h2>
-<a id="plugging-memcached-manager-to-an-existing-rails-app" class="anchor" href="#plugging-memcached-manager-to-an-existing-rails-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugging memcached manager to an existing Rails app</h2>
+        <h2>
+        <a id="plugging-memcached-manager-to-an-existing-rails-app" class="anchor" href="#plugging-memcached-manager-to-an-existing-rails-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugging memcached manager to an existing Rails app</h2>
 
-<p>Just mount it in your routes(<em>config/routes.rb</em>) file:</p>
+        <p>Just mount it in your routes(<em>config/routes.rb</em>) file:</p>
 
-<pre><code>mount MemcachedManager::Routes, :at =&gt; '/mm'
-</code></pre>
+        <pre><code>mount MemcachedManager::Routes, :at =&gt; '/mm'
+        </code></pre>
 
-<p>So it will be accessible in the "/mm" route of your application.</p>
+        <p>So it will be accessible in the "/mm" route of your application.</p>
 
-<p>If you want to specify a different config than the defaults(localhost:11211) add an <em>.env</em> file with the following:</p>
+        <p>If you want to specify a different config than the defaults(localhost:11211) add an <em>.env</em> file with the following:</p>
 
-<pre><code>memcached_host: foo.bar
-memcached_port: 1337
-</code></pre>
+        <pre><code>memcached_host: foo.bar
+        memcached_port: 1337
+        </code></pre>
 
-<h2>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+        <h2>
+        <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
-<pre><code>Ruby &gt;= 1.9
-Memcached (of course)
-</code></pre>
+        <pre><code>Ruby &gt;= 1.9
+        Memcached (of course)
+        </code></pre>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
