@@ -1,0 +1,1 @@
+{"name":"Memcached Manager","tagline":"The definitive solution to manage your memcached server.","body":"### Memcached Manager\r\nJust testing github pages website generator.\r\n\r\n### Installing\r\n```\r\n$ gem install memcached-manager\r\n$ memcached-manager\r\n```\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
