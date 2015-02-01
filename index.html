@@ -23,14 +23,10 @@
 
       </header>
       <section>
-        <h2>
-<a id="did-you-ever-try-to-read-all-keys-that-are-in-memcached-and-found-out-that-memcached-have-no-command-that-allows-it" class="anchor" href="#did-you-ever-try-to-read-all-keys-that-are-in-memcached-and-found-out-that-memcached-have-no-command-that-allows-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Did you ever try to read all keys that are in memcached and found out that memcached have no command that allows it?</h2>
+        <p>Miss being able to actually know what's inside your memcached server in a simple way? Memcached Manager is there for you.</p>
 
 <h2>
-<a id="do-you-miss-being-able-to-actually-know-what-is-inside-your-memcached-server-effortlessly" class="anchor" href="#do-you-miss-being-able-to-actually-know-what-is-inside-your-memcached-server-effortlessly" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do you miss being able to actually know what is inside your memcached server effortlessly?</h2>
-
-<h2>
-<a id="i-did-want-that-so-ive-built-it-check-it-out" class="anchor" href="#i-did-want-that-so-ive-built-it-check-it-out" aria-hidden="true"><span class="octicon octicon-link"></span></a>I did want that, so I've built it. Check it out:</h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
 
 <p>(image of menu)</p>
 
@@ -56,7 +52,7 @@
 <li>A CRUD for your memcached server: Create, Read, Update or Delete any key without using an archaic direct telnet connection.</li>
 </ul>
 
-<p>All that packaged in a slick web interface, just install it and use it! It's also pluggable to any rack/rails application with -one line-.</p>
+<p>All that packaged in a slick web interface, just install it and use it! It's also pluggable to any rack/rails application with <em>one line</em>.</p>
 
 <h2>
 <a id="ok-i-want-it-how-do-i-install" class="anchor" href="#ok-i-want-it-how-do-i-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ok, I want it. How do I install?</h2>
@@ -87,14 +83,14 @@
 <h2>
 <a id="plugging-memcached-manager-to-an-existing-rails-app" class="anchor" href="#plugging-memcached-manager-to-an-existing-rails-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugging memcached manager to an existing Rails app</h2>
 
-<p>Just mount it in your routes(config/routes.rb) file:</p>
+<p>Just mount it in your routes(<em>config/routes.rb</em>) file:</p>
 
 <pre><code>mount MemcachedManager::Routes, :at =&gt; '/mm'
 </code></pre>
 
 <p>So it will be accessible in the "/mm" route of your application.</p>
 
-<p>If you want to specify a different config than the defaults(localhost:11211) add an +.env+ file with the following:</p>
+<p>If you want to specify a different config than the defaults(localhost:11211) add an <em>.env</em> file with the following:</p>
 
 <pre><code>memcached_host: foo.bar
 memcached_port: 1337
