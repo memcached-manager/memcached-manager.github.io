@@ -5,3 +5,8 @@ body {
 img#logo {
   width: 230px;
 }
+
+.screenshot {
+  padding-top: 10px;
+  box-shadow: 5px 5px 5px #888888;
+}
